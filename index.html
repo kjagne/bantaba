@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>texting</title>
+  <html  manifest="index.appcache">
+<head>
+<title>Library</title>
+<meta charset='utf-8'/>
+<meta name='format-detection' content='telephone=no' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1'/>
+
+<meta name='apple-mobile-web-app-cabable' content='YES'/>
+<meta name='keywords' content='JQM.Show,JQuery Mobile,JQuery,JavaScript,Google Play Store,kara Jagne ,Mobile,Hybrid,HTML,CSS,Responsive,HTML5,JSON,Stringify,Parse'/>
+<meta name='mobile-web-app-capable' content='yes'/>
+<meta name='apple-mobile-web-app-title' content='Library'/>
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent.'/>
+<meta name='version' content='1.00' />
+<meta name='generator' content='APP 5.00' />
+<meta name='date' content='2017-11-15 11:30' />
+<meta name='copyright' content='kara Jagne ' />
+<meta name='author' content=' Kara Jagne' />
+<meta name='email' content='karajagne@gmail.com' />
+<!--
+<meta name='website' content='http://www.molgame.cf' />
+-->
+<meta name='description' content='Simple Books Collection. Available from Android Play Store at https://play.google.com/store/apps/details?id=com.b4a.JQMShow' />
+<link rel="apple-touch-icon" href="apps.png">
+<link rel="icon" type="image/png" href="apps.png">
+<link rel="shortcut icon" type="image/png" href="apps.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apps57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apps72.png">
+<link rel="apple-touch-icon" sizes="80x80" href="apps80.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apps114.png">
+
+<script src="jquery-3.2.1.js"></script>
+<script src="bantaba.js"></script>
+<link rel="stylesheet" type="text/css" href="bantaba.css">
+
+<link rel="apple-touch-icon-precomposed" href="appsIconPreComposed.png">
+<link rel="apple-touch-startup-image" href="appsIconStartUp320by460.png">
+<link rel="stylesheet" href="toastr.min.css">
+<link rel="stylesheet" href="jqm-datebox.css">
+<link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="addtohomescreen.css">
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script src="navbar.js" type="text/javascript"></script>
+<script src="jqm-datebox.core.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.slidebox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.flipbox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.datebox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.customflip.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.custombox.js" type="text/javascript"></script>
+<script src="jqm-datebox.mode.calbox.js" type="text/javascript"></script>
+<script src="toastr.min.js" type="text/javascript"></script>
+<script src="fastclick.js" type="text/javascript"></script>
+<!--[if IE]>
+<script src="html5.js" type="text/javascript"></script>
+<![endif]-->
+<script src="stanfordcryptolibrary.js" type="text/javascript"></script>
+<script src="excellentexport.min.js" type="text/javascript"></script>
+<script src="d3.min.js" type="text/javascript"></script>
+<script src="d3tree.js" type="text/javascript"></script>
+<script src="addtohomescreen.min.js" type="text/javascript"></script>
+<script src="remoteserver.js" type="text/javascript"></script>
+<script src="support.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
+
+<!-- ---------coment link---------- -->
+<link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+ 
+<script type="text/javascript" src="js/lib/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-comments.js"></script>
+<!-- ---------coment link---------- -->
+	<!---------------- / Firebase Sign In---------------->
+	<!--------- page 1 ------------>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDiicjmHj9JilASurfFENPI7-nxpjh1-2E",
+    authDomain: "bantabaapp.firebaseapp.com",
+    databaseURL: "https://bantabaapp.firebaseio.com",
+    projectId: "bantabaapp",
+    storageBucket: "",
+    messagingSenderId: "354968355691"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<!--------- page 2 ------------>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'home.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>	
+<!---------------- / Firebase Sign In---------------->
+
+
+	<script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+	<h1 style="text-align: center; font-style: italic;">Bantaba</h1>
+	<div style="margin-top: 10%;" id="firebaseui-auth-container"></div>
+
+
+
+</body>
+</html>
