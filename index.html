@@ -8,6 +8,11 @@
 <!--
 <meta name='playstore' content='https://play.google.com/store/apps/details?id=com.b4a.JQMShow'/>
 -->
+ <script type="text/javascript" src="timeline.js"></script>
+ <script type="text/javascript" src="myjs.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/feeling.css">
+  <script type="text/javascript" src="jquery.min1.js"></script>
+<script type="text/javascript" src="feeling.js"></script>
 
 
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
@@ -347,20 +352,51 @@ footer{
 <br>
 
 <article class="regular2">
-			<p><img src="photos/ee.jpg"><h3>Music</h3>
+			<p><img src="photos/ee.jpg">
+        <h3>Music</h3>
 			Drake: This caribbean girl is pushing her limits!
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 			<div class="fb-comments" data-colorscheme="dark" data-href="https://kjagne.github.io/home.html#pgfashion" data-numposts="5" data-mobile="Auto-detected" data-width="100%"></div>
 	</article>
 
-	<article class="regular2">
-			<p><img src="photos/ty.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-			<div class="fb-comments" data-colorscheme="dark" data-href="https://kjagne.github.io/home.html#pgfashion" data-numposts="5" data-mobile="Auto-detected" data-width="100%"></div>
-	</article>
 	
-	
+
+  <div class="container" id="welcome">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 id="welcomeText"></h2>
+        <img src="doge.jpg" class="mainDoge">
+      </div>
+
+
+      <div class="col-lg-6" id="uploadDiv">
+        <h2>What type of post:</h2> <div class="ui-field-contain" class="dropdown favoriteDoge">
+          <label for="select-native-2" class="dropdown-toggle" id="dogDrop"  data-toggle="dropdown">
+          </label>
+          <select  name="select-native-2" id="select-native-2" data-mini="true" class="dropdown-menu">
+            <option value="1">News</option>
+            <option value="2">Ent.</option>
+            <option value="3">Sports</option>
+          </select>
+          <div ></div>
+        </div>
+
+
+        <h2>Upload Doge</h2>
+        <label class="upload-group">
+         
+          <input rows="2" type="file" class="upload-group" id="file">
+        </label>
+        <textarea type="text" id="imageCaption" placeholder="Write a Caption"></textarea>
+
+        
+
+        <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
+      </div>
+
+    </div>
+  </div>
+
 	
 	
 
@@ -434,41 +470,27 @@ footer{
 <div id="pgMenuCnt" data-role="content">
 	<h2>Sports</h2>
 
-<article class="regular2">
-			<p><img src="photos/kobe.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/k.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/r.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/p.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/j.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
+
+  <div class="container" id="contentHolder">
+
+
+    <div>
+      <span class="like-btn"> 
+            <span class="like-btn-emo like-btn-default"></span> 
+            <span class="like-btn-text">Like</span> 
+              <ul style="margin-top:30px;" class="feelings-box"> 
+                <li class="feeling feeling-like" data-feeling="Like"></li>
+                <li class="feeling feeling-love" data-feeling="Love"></li>
+                <li class="feeling feeling-haha" data-feeling="HaHa"></li>
+                <li class="feeling feeling-wow" data-feeling="Wow"></li>
+                <li class="feeling feeling-sad" data-feeling="Sad"></li>
+                <li class="feeling feeling-angry" data-feeling="Angry"></li>
+              </ul>
+          </span>
+     </div>
+     <div class="fb-comments" data-colorscheme="dark" data-href="https://kjagne.github.io/home.html#pgfashion" data-numposts="5" data-mobile="Auto-detected" data-width="100%"></div>
+  </div>
+
 	
 	
 
