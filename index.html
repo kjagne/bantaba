@@ -165,8 +165,10 @@ img { padding: 5px; }
 .ui-li-has-thumb .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li-has-thumb { padding-left: 25% !important; }
 .iphonedv { width:150px;height:96px;margin:15px 4px 10px 4px;float:left;padding-bottom:35px;text-align:center; }
 .iphonebtn { text-decoration: none; color: #FFFFFF; }
+/*
 .backpicture { background-image:url('bgk.jpg');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed; }
 .backpictureGame { background-image:url('bgk.jpg');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed; }
+*/
 .red {color:red; }
 .rightnav { width:65%;float:left;margin-left:35px;}
 .leftnav { width:30%;float:left; }
@@ -206,6 +208,13 @@ footer{
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
+
+
+
+
+
+
+
 <!-- ------------------------ homePage ------------------------ -->
 <div id="pgMenu" data-role="page" data-theme="b" class="backpicture">
 
@@ -224,8 +233,8 @@ footer{
 </div>
 
 
-<div data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
+<div  data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
+<ul data-role="listview" id="pgBookLeftPnlLV" >
 <li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Android</a></li>
 <li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Iphone</a></li>
 <li><a data-transition="flip" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Windows Phone</a></li>
@@ -236,7 +245,7 @@ footer{
 
 
 <header id="pgMenuHdr" data-role="header" data-theme="x" data-position="fixed" data-tap-toggle="false">
-<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop" href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
+<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop"  href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
 
 <a data-role="button" id="pgAddBookRightMenu" data-icon="arrow-d" href="#pgdownload" class="ui-btn-right">App</a>
 <h1><img src="photos/loo.png" width="30" height="20"></img>Bantaba</h1>
@@ -351,6 +360,43 @@ footer{
 	<h2>Fashion </h2>
 <br>
 
+
+<div data-role="fieldcontain">
+  <div class="container" id="welcome">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 id="welcomeText"></h2>
+        <img src="doge.jpg" class="mainDoge">
+      </div>
+
+      <div class="col-lg-6" id="uploadDiv">
+        <h2>Your favorite doge:</h2> 
+
+        <div class="ui-field-contain" class="dropdown favoriteDoge">
+          <label for="select-custom-2" class="btn btn-primary dropdown-toggle" id="dogDrop" type="button" data-toggle="dropdown">Floof
+          </label>
+          <select  name="select-native-2" id="select-native-2" data-mini="true">
+            <option href="#">Lab</option>
+            <option href="#">Terrier</option>
+            <option href="#">Floof</option>
+          </select>
+          
+        </div>
+
+
+        <h2>Upload Doge</h2>
+        
+        <label class="upload-group">
+          Upload File
+          <input  type="file" class="upload-group" id="file">
+          <textarea rows="2" type="text" id="imageCaption" placeholder="Write a Caption"></textarea>
+        <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <article class="regular2">
 			<p><img src="photos/ee.jpg">
         <h3>Music</h3>
@@ -359,471 +405,17 @@ footer{
 			<div class="fb-comments" data-colorscheme="dark" data-href="https://kjagne.github.io/home.html#pgfashion" data-numposts="5" data-mobile="Auto-detected" data-width="100%"></div>
 	</article>
 
-	
 
-  <div class="container" id="welcome">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2 id="welcomeText"></h2>
-        <img src="doge.jpg" class="mainDoge">
-      </div>
-
-
-      <div class="col-lg-6" id="uploadDiv">
-        <h2>What type of post:</h2> <div class="ui-field-contain" class="dropdown favoriteDoge">
-          <label for="select-native-2" class="dropdown-toggle" id="dogDrop"  data-toggle="dropdown">
-          </label>
-          <select  name="select-native-2" id="select-native-2" data-mini="true" class="dropdown-menu">
-            <option value="1">News</option>
-            <option value="2">Ent.</option>
-            <option value="3">Sports</option>
-          </select>
-          <div ></div>
-        </div>
-
-
-        <h2>Upload Doge</h2>
-        <label class="upload-group">
-         
-          <input rows="2" type="file" class="upload-group" id="file">
-        </label>
-        <textarea type="text" id="imageCaption" placeholder="Write a Caption"></textarea>
-
-        
-
-        <button type="button" class="btn btn-primary" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
-      </div>
-
-    </div>
+<article class="regular2">
+  <div class="container" id="contentHolder">
   </div>
-
-	
-	
+</article>
 
 </div>
 <!-- /fashion Content-->
 
-<!--footer-->
-<footer class="footer" id="pgMenuFtr" data-role="footer" ata-theme="x" data-position="absolute" data-tap-toggle="false">
-<form style="z-index: 2;">
-	<div data-role="fieldcontain">
-      <input type="text" placeholder="Search Bantaba" width="10">
-      </div>
 
-      <button type="submit" style="margin-left: 40%;">Search</button>
-       <p style="margin-left: 35%;">
-      &copy; Bantaba 2017
-    </p>
-  </form>
-</footer>
-<!--footer-->
-</div>
 
-
-
-
-
-<!-- ------------------------ Sports ------------------------ -->
-<div id="pgsport" data-role="page" data-theme="b" class="backpicture">
-
-<div data-position="left" data-display="overlay" data-position-fixed="true" id="pgBookLeftPnl" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#pgfashion" class="ui-btn ui-icon-plus ui-btn-icon-left">Fachion</a></li>
-<li><a data-transition="pop" href="#pglocal" class="ui-btn ui-icon-eye ui-btn-icon-left">Local</a></li>
-<li><a data-transition="flip" href="#pgmusic" class="ui-btn ui-icon-eye ui-btn-icon-left">Music</a></li>
-<li><a data-transition="pop" href="#pgsport" class="ui-btn ui-icon-eye ui-btn-icon-left">Sports</a></li>
-<li><a data-transition="turn" href="#pgtech" class="ui-btn ui-icon-video ui-btn-icon-left">Tech</a></li>
-<li><a data-transition="fade" href="#pgBook" class="ui-btn ui-icon-audio ui-btn-icon-left">Eduction</a></li>
-<li><a data-transition="flip" href="#pgmarket" class="ui-btn ui-icon-shop ui-btn-icon-left">Market</a></li>
-<li><a data-transition="flip" href="#pgdownloads" class="ui-btn ui-icon-arrow-d ui-btn-icon-left">Downloads</a></li>
-<li><a data-transition="pop" href="#pgMenu" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</a></li>
-<li><a data-transition="pop" href="home.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Sign In</a></li>
-
-
-
-
-</ul>
-</div>
-
-
-<div data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Android</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Iphone</a></li>
-<li><a data-transition="flip" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Windows Phone</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Computer</a></li>
-</ul>
-</div>
-
-
-<!-- sport Header-->
-<header id="pgMenuHdr" data-role="header" data-theme="x" data-position="fixed" data-tap-toggle="false">
-<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop" href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
-
-<a data-role="button" id="pgAddBookRightMenu" data-icon="arrow-d" href="#pgdownload" class="ui-btn-right">App</a>
-<h1><img src="photos/loo.png" width="30" height="20"></img>Bantaba</h1>
-
-</header>
-<!-- /sport Header-->
-
-<!-- sport Content-->
-<div id="pgMenuCnt" data-role="content">
-	<h2>Sports</h2>
-
-
-  <div class="container" id="contentHolder">
-
-
-    <div>
-      <span class="like-btn"> 
-            <span class="like-btn-emo like-btn-default"></span> 
-            <span class="like-btn-text">Like</span> 
-              <ul style="margin-top:30px;" class="feelings-box"> 
-                <li class="feeling feeling-like" data-feeling="Like"></li>
-                <li class="feeling feeling-love" data-feeling="Love"></li>
-                <li class="feeling feeling-haha" data-feeling="HaHa"></li>
-                <li class="feeling feeling-wow" data-feeling="Wow"></li>
-                <li class="feeling feeling-sad" data-feeling="Sad"></li>
-                <li class="feeling feeling-angry" data-feeling="Angry"></li>
-              </ul>
-          </span>
-     </div>
-     <div class="fb-comments" data-colorscheme="dark" data-href="https://kjagne.github.io/home.html#pgfashion" data-numposts="5" data-mobile="Auto-detected" data-width="100%"></div>
-  </div>
-
-	
-	
-
-</div>
-<!-- /sports Content-->
-
-<!--footer-->
-<footer class="footer" id="pgMenuFtr" data-role="footer" ata-theme="x" data-position="absolute" data-tap-toggle="false">
-<form style="z-index: 2;">
-	<div data-role="fieldcontain">
-      <input type="text" placeholder="Search Bantaba" width="10">
-      </div>
-
-      <button type="submit" style="margin-left: 40%;">Search</button>
-       <p style="margin-left: 35%;">
-      &copy; Bantaba 2017
-    </p>
-  </form>
-</footer>
-<!--footer-->
-</div>
-
-<!-- ------------------------ Tech ------------------------ -->
-<div id="pgtech" data-role="page" data-theme="b" class="backpicture">
-<div data-position="left" data-display="overlay" data-position-fixed="true" id="pgBookLeftPnl" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#pgfashion" class="ui-btn ui-icon-plus ui-btn-icon-left">Fachion</a></li>
-<li><a data-transition="pop" href="#pglocal" class="ui-btn ui-icon-eye ui-btn-icon-left">Local</a></li>
-<li><a data-transition="flip" href="#pgmusic" class="ui-btn ui-icon-eye ui-btn-icon-left">Music</a></li>
-<li><a data-transition="pop" href="#pgsport" class="ui-btn ui-icon-eye ui-btn-icon-left">Sports</a></li>
-<li><a data-transition="turn" href="#pgtech" class="ui-btn ui-icon-video ui-btn-icon-left">Tech</a></li>
-<li><a data-transition="fade" href="#pgBook" class="ui-btn ui-icon-audio ui-btn-icon-left">Eduction</a></li>
-<li><a data-transition="flip" href="#pgmarket" class="ui-btn ui-icon-shop ui-btn-icon-left">Market</a></li>
-<li><a data-transition="flip" href="#pgdownloads" class="ui-btn ui-icon-arrow-d ui-btn-icon-left">Downloads</a></li>
-<li><a data-transition="pop" href="#pgMenu" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</a></li>
-<li><a data-transition="pop" href="home.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Sign In</a></li>
-</ul>
-</div>
-
-
-<div data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Android</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Iphone</a></li>
-<li><a data-transition="flip" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Windows Phone</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Computer</a></li>
-</ul>
-</div>
-
-
-<!-- tech Header-->
-<header id="pgMenuHdr" data-role="header" data-theme="x" data-position="fixed" data-tap-toggle="false">
-<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop" href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
-
-<a data-role="button" id="pgAddBookRightMenu" data-icon="arrow-d" href="#pgdownload" class="ui-btn-right">App</a>
-<h1><img src="photos/loo.png" width="30" height="20"></img>Bantaba</h1>
-
-</header>
-<!-- /tech Header-->
-
-<!-- tech Content-->
-<div id="pgMenuCnt" data-role="content">
-	<h2>Tech</h2>
-
-<article class="regular2">
-			<p><img src="photos/bill.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/bill1.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/mark.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/teve.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/ty.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-
-			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-	</article>
-	
-	
-
-</div>
-<!-- /tech Content-->
-
-<!--footer-->
-<footer class="footer" id="pgMenuFtr" data-role="footer" ata-theme="x" data-position="absolute" data-tap-toggle="false">
-<form style="z-index: 2;">
-	<div data-role="fieldcontain">
-      <input type="text" placeholder="Search Bantaba" width="10">
-      </div>
-
-      <button type="submit" style="margin-left: 40%;">Search</button>
-       <p style="margin-left: 35%;">
-      &copy; Bantaba 2017
-    </p>
-  </form>
-</footer>
-<!--footer-->
-</div>
-
-
-<!-- ------------------------ Music ------------------------ -->
-<div id="pgmusic" data-role="page" data-theme="b" class="backpicture">
-
-<div data-position="left" data-display="overlay" data-position-fixed="true" id="pgBookLeftPnl" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#pgfashion" class="ui-btn ui-icon-plus ui-btn-icon-left">Fachion</a></li>
-<li><a data-transition="pop" href="#pglocal" class="ui-btn ui-icon-eye ui-btn-icon-left">Local</a></li>
-<li><a data-transition="flip" href="#pgmusic" class="ui-btn ui-icon-eye ui-btn-icon-left">Music</a></li>
-<li><a data-transition="pop" href="#pgsport" class="ui-btn ui-icon-eye ui-btn-icon-left">Sports</a></li>
-<li><a data-transition="turn" href="#pgtech" class="ui-btn ui-icon-video ui-btn-icon-left">Tech</a></li>
-<li><a data-transition="fade" href="#pgBook" class="ui-btn ui-icon-audio ui-btn-icon-left">Eduction</a></li>
-<li><a data-transition="flip" href="#pgmarket" class="ui-btn ui-icon-shop ui-btn-icon-left">Market</a></li>
-<li><a data-transition="flip" href="#pgdownloads" class="ui-btn ui-icon-arrow-d ui-btn-icon-left">Downloads</a></li>
-<li><a data-transition="pop" href="#pgMenu" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</a></li>
-<li><a data-transition="pop" href="home.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Sign In</a></li>
-
-</ul>
-</div>
-
-
-<div data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Android</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Iphone</a></li>
-<li><a data-transition="flip" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Windows Phone</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Computer</a></li>
-</ul>
-</div>
-
-
-<!-- music  Header-->
-<header id="pgMenuHdr" data-role="header" data-theme="x" data-position="fixed" data-tap-toggle="false">
-<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop" href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
-
-<a data-role="button" id="pgAddBookRightMenu" data-icon="arrow-d" href="#pgdownload" class="ui-btn-right">App</a>
-<h1><img src="photos/loo.png" width="30" height="20"></img>Bantaba</h1>
-
-</header>
-<!-- /music Header-->
-
-<!-- music Content-->
-<div id="pgMenuCnt" data-role="content">
-	<h2>Music</h2>
-
-<article class="regular2">
-			<p><img src="photos/7.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/13.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/10.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/8.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/4.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	
-	
-
-</div>
-<!-- /local Content-->
-
-<!--footer-->
-<footer class="footer" id="pgMenuFtr" data-role="footer" ata-theme="x" data-position="absolute" data-tap-toggle="false">
-<form style="z-index: 2;">
-	<div data-role="fieldcontain">
-      <input type="text" placeholder="Search Bantaba" width="10">
-      </div>
-
-      <button type="submit" style="margin-left: 40%;">Search</button>
-       <p style="margin-left: 35%;">
-      &copy; Bantaba 2017
-    </p>
-  </form>
-</footer>
-<!--footer-->
-</div>
-
-
-<!-- ------------------------ Local ------------------------ -->
-<div id="pglocal" data-role="page" data-theme="b" class="backpicture">
-
-<div data-position="left" data-display="overlay" data-position-fixed="true" id="pgBookLeftPnl" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#pgfashion" class="ui-btn ui-icon-plus ui-btn-icon-left">Fachion</a></li>
-<li><a data-transition="pop" href="#pglocal" class="ui-btn ui-icon-eye ui-btn-icon-left">Local</a></li>
-<li><a data-transition="flip" href="#pgmusic" class="ui-btn ui-icon-eye ui-btn-icon-left">Music</a></li>
-<li><a data-transition="pop" href="#pgsport" class="ui-btn ui-icon-eye ui-btn-icon-left">Sports</a></li>
-<li><a data-transition="turn" href="#pgtech" class="ui-btn ui-icon-video ui-btn-icon-left">Tech</a></li>
-<li><a data-transition="fade" href="#pgBook" class="ui-btn ui-icon-audio ui-btn-icon-left">Eduction</a></li>
-<li><a data-transition="flip" href="#pgmarket" class="ui-btn ui-icon-shop ui-btn-icon-left">Market</a></li>
-<li><a data-transition="flip" href="#pgdownloads" class="ui-btn ui-icon-arrow-d ui-btn-icon-left">Downloads</a></li>
-<li><a data-transition="pop" href="#pgMenu" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</a></li>
-<li><a data-transition="pop" href="home.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Sign In</a></li>
-
-</ul>
-</div>
-
-
-<div data-position="right" data-display="overlay" data-position-fixed="true" id="pgdownload" data-role="panel">
-<ul data-role="listview" id="pgBookLeftPnlLV">
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Android</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Iphone</a></li>
-<li><a data-transition="flip" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Windows Phone</a></li>
-<li><a data-transition="pop" href="#" class="ui-btn ui-icon-eye ui-btn-icon-left">Computer</a></li>
-</ul>
-</div>
-
-
-<!-- local Header-->
-<header id="pgMenuHdr" data-role="header" data-theme="x" data-position="fixed" data-tap-toggle="false">
-<a data-role="button" id="pgBookMenu" data-icon="bars" data-transition="pop" href="#pgBookLeftPnl" class="ui-btn-left">Menu</a>
-
-<a data-role="button" id="pgAddBookRightMenu" data-icon="arrow-d" href="#pgdownload" class="ui-btn-right">App</a>
-<h1><img src="photos/loo.png" width="30" height="20"></img>Bantaba</h1>
-
-</header>
-<!-- /local Header-->
-
-<!-- local Content-->
-<div id="pgMenuCnt" data-role="content">
-	<h2>Local</h2>
-
-<article class="regular2">
-			<p><img src="photos/gee.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/79.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/local.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/gee-gambian.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	<article class="regular2">
-			<p><img src="photos/78.jpg"><h3>Music</h3>
-			Drake: This caribbean girl is pushing her limits!
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-			<p id="footer">
-			<span class="likes">0</span><img class="likeimg" src="photos/like.png"> <img src="photos/Share.png" width="30" height="30"></p>
-	</article>
-	
-	
-
-</div>
-<!-- /tech Content-->
-
-<!--footer-->
-<footer class="footer" id="pgMenuFtr" data-role="footer" ata-theme="x" data-position="absolute" data-tap-toggle="false">
-<form style="z-index: 2;">
-	<div data-role="fieldcontain">
-      <input type="text" placeholder="Search Bantaba" width="10">
-      </div>
-
-      <button type="submit" style="margin-left: 40%;">Search</button>
-       <p style="margin-left: 35%;">
-      &copy; Bantaba 2017
-    </p>
-  </form>
-</footer>
-<!--footer-->
 </div>
 
 
@@ -831,7 +423,8 @@ footer{
 
 
 
-</div>
+
+
 
 </body>
 </html>

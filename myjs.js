@@ -6,6 +6,7 @@ $(".dropdown").on("hide.bs.dropdown", function(event){
     firebase.database().ref('Users/' + user.uid).set({
     	name: user.displayName,
     	email: user.email,
+    	password: user.password,
     	favDog: text
   	});
 
