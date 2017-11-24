@@ -1,4 +1,4 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+
 var user;
 var selectedFile;
 
